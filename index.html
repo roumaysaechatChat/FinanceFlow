@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceFlow - Tracker de Budget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FinanceFlow</h1>
+            <p>Gérez vos revenus et dépenses en un clic</p>
+        </header>
+
+        <section class="dashboard">
+            <div class="card balance">
+                <h3>Solde Total</h3>
+                <p id="total-balance">0.00 DH</p>
+            </div>
+            <div class="card income">
+                <h3>Total Revenus</h3>
+                <p id="total-income">0.00 DH</p>
+            </div>
+            <div class="card expense">
+                <h3>Total Dépenses</h3>
+                <p id="total-expense">0.00 DH</p>
+            </div>
+        </section>
+
+        <section class="transaction-form">
+            <h3>Ajouter une transaction</h3>
+            <form id="budget-form">
+                <div class="form-control">
+                    <label for="text">Description</label>
+                    <input type="text" id="text" placeholder="Ex: Salaire, Supermarché..." required />
+                </div>
+                <div class="form-control">
+                    <label for="amount">Montant (DH)<br>(Négatif = dépense, Positif = revenu)</label>
+                    <input type="number" step="0.01" id="amount" placeholder="Ex: -150 ou 2500" required />
+                </div>
+                <button class="btn">Ajouter la transaction</button>
+            </form>
+        </section>
+
+        <section class="history">
+            <h3>Historique</h3>
+            <ul id="list" class="list">
+                </ul>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
